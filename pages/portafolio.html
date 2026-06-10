@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio Profesional - Angel Rodriguez</title>
+
+    <!-- Ícono de la pestaña del navegador -->
+    <link rel="icon" href="../img/mundito.ico" type="image/x-icon">
+
+    <!-- Librería externa para usar íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/portafolio.css">
+</head>
+
+<body>
+
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Mi Portafolio Web</h1>
+        <p>Estudiante de 4to Semestre - Universidad de las Fuerzas Armadas ESPE</p>
+    </header>
+
+    <!-- Menú de navegación principal -->
+    <nav>
+        <a href="../index.html">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+        </a>
+
+        <a href="buscar.html">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Buscar
+        </a>
+
+        <a href="cto/contacto.html">
+            <i class="fa-solid fa-envelope"></i>
+            Contacto
+        </a>
+
+        <a href="portafolio.html" class="active-nav">
+            <i class="fa-solid fa-briefcase"></i>
+            Portafolio
+        </a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección de presentación -->
+        <section id="presentacion-portafolio">
+            <h2>Sobre Mí</h2>
+            <p>
+                ¡Hola! Mi nombre es <strong>Angel Steven Rodriguez Chavez</strong>. Soy estudiante de cuarto semestre de
+                la
+                Universidad de las Fuerzas Armadas (ESPE) en Ecuador. Me apasiona el mundo del desarrollo web, la
+                programación, y
+                la administración de redes (networking).
+            </p>
+            <p>
+                Actualmente, estoy enfocado en dominar tecnologías como <strong>HTML</strong>, <strong>CSS</strong> y
+                <strong>JavaScript</strong>
+                con el fin de crear sitios web interactivos, eficientes y visualmente atractivos. Mi meta es
+                consolidarme como un
+                desarrollador de software integral.
+            </p>
+            <p class="nota">
+                <i class="fa-solid fa-code-branch"></i> Puedes ver el progreso de este proyecto académico en mi
+                repositorio oficial:
+                <a href="https://github.com/angeldev7/P2Tarea-Web-CSS" target="_blank"
+                    class="repo-link"><strong>P2Tarea-Web-CSS</strong></a>.
+            </p>
+        </section>
+
+        <!-- Sección de intereses y vida personal -->
+        <section id="detalles-personales">
+            <h2>Pasiones, Gustos y Entorno</h2>
+            <p>El desarrollo y la tecnología se disfrutan más cuando están rodeados de buena música y fieles compañeros:
+            </p>
+
+            <div class="tarjetas-container">
+                <!-- Tarjeta 1: Mi Gato Mino -->
+                <article class="tarjeta-portfolio">
+                    <h3><i class="fa-solid fa-cat"></i> Mi compañero Mino</h3>
+                    <p>
+                        Mino es mi gato y mi fiel compañero de aventuras (o de largas siestas mientras estudio). Es un
+                        gatito sumamente juguetón,
+                        cariñoso y siempre está cerca de mi teclado vigilando mi código.
+                    </p>
+                    <figure>
+                        <img src="../img/mino.jpg" alt="Mino mi gato hermoso" width="70" height="400" class="img-mino">
+                        <figcaption>Mino, el fiel compañero del programador.</figcaption>
+                    </figure>
+                </article>
+
+                <!-- Tarjeta 2: Música y Muse -->
+                <article class="tarjeta-portfolio">
+                    <h3><i class="fa-solid fa-music"></i> Mi Banda Sonora</h3>
+                    <p>
+                        Para programar y concentrarme, la música es fundamental. Una de mis canciones favoritas
+                        actualmente es
+                        <strong>"Panic Station"</strong> de la banda británica <strong>Muse</strong>. Su ritmo enérgico
+                        y dinámico es perfecto
+                        para mantener la motivación alta mientras diseño páginas web.
+                    </p>
+                    <figure>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/uose1CZPeI0?si=3tBddUAbsqTmc-kQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption>Video oficial de "Panic Station" - Muse.</figcaption>
+                    </figure>
+                </article>
+
+                <!-- Tarjeta 3: Anime y Entretenimiento -->
+                <article class="tarjeta-portfolio">
+                    <h3><i class="fa-solid fa-circle-play"></i> Personajes favorito</h3>
+                    <p>
+                        Además de la música y la programación, disfruto de la cultura de entretenimiento como el manga y
+                        el anime.
+                        Tengo un gusto particular por el personaje <strong>Asa Mitaka</strong> de la serie de el anime
+                        <em>Chainsaw Man</em>.
+                        Ella es una joven estudiante cuya personalidad compleja y reflexiva hace que su historia sea
+                        sumamente interesante.
+                    </p>
+                    <figure>
+                        <video src="../video/AsaMitaka.mp4" controls width="400" height="300" muted loop>
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <figcaption>Personaje destacado: Asa Mitaka (Chainsaw Man).</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de habilidades y progreso -->
+        <section id="habilidades-portafolio">
+            <h2>Progreso de Aprendizaje</h2>
+            <p>
+                A lo largo de este cuarto semestre, he estado adquiriendo y consolidando habilidades tanto en desarrollo
+                frontend
+                como en áreas de soporte tecnológico. A continuación, presento un resumen de mi avance actual:
+            </p>
+
+            <table class="tabla-portafolio">
+                <caption>Tabla de Habilidades y Aprendizaje</caption>
+                <thead>
+                    <tr>
+                        <th>Habilidad / Tecnología</th>
+                        <th>Nivel de Dominio</th>
+                        <th>Progreso Estimado</th>
+                        <th>Resultados / Aplicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>HTML5 Semántico</strong></td>
+                        <td>Avanzado</td>
+                        <td>
+                            <progress value="85" max="100"></progress>
+                            <span>85%</span>
+                        </td>
+                        <td>Estructuración correcta de sitios accesibles y estructurados.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CSS y Estilos</strong></td>
+                        <td>Básico</td>
+                        <td>
+                            <progress value="30" max="100"></progress>
+                            <span>30%</span>
+                        </td>
+                        <td>Maquetación responsiva, paletas de colores y diseño consistente.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong> Redes</strong></td>
+                        <td>Intermedio - Avanzado</td>
+                        <td>
+                            <progress value="40" max="100"></progress>
+                            <span>40%</span>
+                        </td>
+                        <td>Diseño de topologías de red, subnetting y protocolos de enrutamiento.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Angel Rodriguez.</p>
+        <p>Universidad de las Fuerzas Armadas (ESPE) - Clase de Fundamentos Web.</p>
+        <address>
+            Ecuador | GitHub: <a href="https://github.com/angeldev7/" target="_blank"
+                style="color: white; text-decoration: underline;">angeldev7</a>
+        </address>
+    </footer>
+
+</body>
+
+</html>

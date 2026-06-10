@@ -1,0 +1,130 @@
+/* ============================================================
+   portafolio.css
+   Estilos específicos de la página pages/portafolio.html.
+   Debe cargarse después de general.css para sobrescribir y extender.
+   ============================================================ */
+
+#presentacion-portafolio {
+    background-color: #ffffff;
+    border-left: 8px solid #1b7505;
+}
+
+.repo-link {
+    color: #1b7505;
+    text-decoration: underline;
+}
+
+.repo-link:hover {
+    color: #dba112;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para las tarjetas individuales */
+.tarjeta-portfolio {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 280px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 18px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-portfolio:hover {
+    border-color: #dba112;
+    transform: translateY(-4px);
+}
+
+.tarjeta-portfolio h3 {
+    margin-top: 0;
+    color: #1b7505;
+    border-bottom: 1px dashed #dba112;
+    padding-bottom: 6px;
+}
+
+.tarjeta-portfolio p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Imagen de Mino */
+.img-mino {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* iframe de video */
+.tarjeta-portfolio iframe {
+    border-radius: 8px;
+}
+
+/* Tabla de habilidades */
+.tabla-portafolio {
+    margin-top: 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+}
+
+.tabla-portafolio th {
+    background-color: #dba112;
+    color: #0d1910;
+    font-weight: bold;
+}
+
+.tabla-portafolio progress {
+    width: 120px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.tabla-portafolio td {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tabla-portafolio tr:last-child td {
+    border-bottom: none;
+}
+
+/* Clase activa para menú */
+nav a.active-nav {
+    background-color: #1b7505;
+    color: white;
+    border-color: #1b7505;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 700px) {
+    .tarjetas-container {
+        flex-direction: column;
+    }
+    
+    .tarjeta-portfolio {
+        width: 100%;
+    }
+    
+    .tabla-portafolio progress {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .nav{
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 12px;
+    }
+}
