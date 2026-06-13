@@ -1,0 +1,299 @@
+/* ============================================================
+   proyeccion.css
+   Estilos propios para la página de proyección (Bootstrap 5).
+   Se usa junto con bootstrap.min.css para personalizar
+   colores, fuentes y componentes con la paleta de la ESPE.
+   ============================================================ */
+
+
+/* --- Variables de colores ---
+   Se definen aquí para reutilizarlas en todo el archivo
+   sin tener que repetir los valores cada vez. */
+
+:root {
+    --espe-verde: #1b7505;
+    --espe-verde-oscuro: #0f4a03;
+    --espe-dorado: #dba112;
+    --espe-fondo: #f4f6f8;
+    --espe-texto: #222222;
+    --sombra-card: 0 0.5rem 1.25rem rgba(27, 117, 5, 0.12);
+}
+
+
+/* --- Estilos generales del body y tipografía --- */
+
+body {
+    background-color: var(--espe-fondo);
+    color: var(--espe-texto);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título con línea dorada abajo, se usa en cada sección */
+.titulo-seccion {
+    color: var(--espe-verde);
+    border-bottom: 3px solid var(--espe-dorado);
+    padding-bottom: 0.35rem;
+    font-weight: 700;
+}
+
+/* Texto de introducción del hero */
+.lead-proyeccion {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* --- Navbar ---
+   Se cambia el color por defecto de Bootstrap por un
+   gradiente verde y se ajusta el hover a dorado. */
+
+.navbar-proyeccion {
+    background: linear-gradient(135deg, var(--espe-verde-oscuro), var(--espe-verde));
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+}
+
+.navbar-proyeccion .navbar-brand,
+.navbar-proyeccion .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-proyeccion .nav-link:hover,
+.navbar-proyeccion .nav-link.active {
+    color: var(--espe-dorado) !important;
+}
+
+.navbar-proyeccion .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-proyeccion .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* --- Hero (encabezado principal) ---
+   Fondo con imagen de la ESPE y un overlay verde encima. */
+
+.hero-proyeccion {
+    background: linear-gradient(160deg, rgba(27, 117, 5, 0.92), rgba(15, 74, 3, 0.95)),
+        url("../img/espe/imagenEjemploEspe.png") center/cover no-repeat;
+    color: #ffffff;
+    border-radius: 0 0 1rem 1rem;
+    padding: 2.5rem 0;
+}
+
+.hero-proyeccion h1 {
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* --- Cards ---
+   Tarjetas con borde dorado arriba y efecto de elevación
+   cuando se pasa el mouse por encima. */
+
+.card-proyeccion {
+    border: none;
+    border-top: 4px solid var(--espe-dorado);
+    box-shadow: var(--sombra-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.card-proyeccion:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(27, 117, 5, 0.18);
+}
+
+/* Altura fija para las imágenes de las cards */
+.card-proyeccion .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Para imágenes tipo logo que no deben recortarse (ej: logo ESPE) */
+.card-proyeccion img.card-img-contain {
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Para fotos verticales como la de Mino, se recorta y se centra */
+.card-proyeccion img.card-img-cover-portrait {
+    object-fit: cover;
+    object-position: 60%;
+    height: 220px;
+}
+
+
+/* --- Aside (barra lateral) --- */
+
+.aside-proyeccion {
+    background-color: #ffffff;
+    border-left: 4px solid var(--espe-verde);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-card);
+}
+
+
+/* --- Acordeón ---
+   Se cambia el color del acordeón cuando está abierto
+   y el borde del focus. */
+
+.accordion-proyeccion .accordion-button:not(.collapsed) {
+    background-color: rgba(27, 117, 5, 0.1);
+    color: var(--espe-verde-oscuro);
+    font-weight: 600;
+}
+
+.accordion-proyeccion .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(27, 117, 5, 0.25);
+}
+
+
+/* --- Carrusel (dentro del acordeón) ---
+   Las imágenes se muestran completas con fondo oscuro
+   para que se vean bien sin importar su tamaño. */
+
+.carousel-mini {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-mini .carousel-item img {
+    height: 320px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #121212; /* fondo oscuro como marco */
+}
+
+
+/* --- Tabla de habilidades --- */
+
+.tabla-proyeccion thead {
+    background-color: var(--espe-verde);
+    color: #ffffff;
+}
+
+.tabla-proyeccion tbody tr:hover {
+    background-color: rgba(219, 161, 18, 0.08);
+}
+
+
+/* --- Barras de progreso --- */
+
+.progress-bar-espe {
+    background-color: var(--espe-verde);
+}
+
+
+/* --- Botones personalizados ---
+   .btn-espe = botón verde sólido
+   .btn-outline-espe = botón con borde verde */
+
+.btn-espe {
+    background-color: var(--espe-verde);
+    border-color: var(--espe-verde);
+    color: #ffffff;
+}
+
+.btn-espe:hover {
+    background-color: var(--espe-verde-oscuro);
+    border-color: var(--espe-verde-oscuro);
+    color: #ffffff;
+}
+
+.btn-outline-espe {
+    border-color: var(--espe-verde);
+    color: var(--espe-verde);
+}
+
+.btn-outline-espe:hover {
+    background-color: var(--espe-verde);
+    color: #ffffff;
+}
+
+
+/* --- Alerta personalizada --- */
+
+.alert-espe {
+    background-color: rgba(27, 117, 5, 0.08);
+    border-color: var(--espe-verde);
+    color: var(--espe-verde-oscuro);
+}
+
+
+/* --- Footer --- */
+
+.footer-proyeccion {
+    background-color: var(--espe-verde-oscuro);
+    color: #ffffff;
+}
+
+.footer-proyeccion a {
+    color: var(--espe-dorado);
+}
+
+
+/* --- Figure (sección de certificaciones) --- */
+
+.figure-proyeccion {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-card);
+}
+
+.figure-proyeccion img {
+    border-radius: 0.375rem;
+}
+
+
+/* --- Modal --- */
+
+.modal-header-espe {
+    background: linear-gradient(135deg, var(--espe-verde), var(--espe-verde-oscuro));
+    color: #ffffff;
+}
+
+
+/* --- List group (navegación lateral) --- */
+
+.list-group-item.active-espe {
+    background-color: var(--espe-verde);
+    border-color: var(--espe-verde);
+}
+
+
+/* --- Responsive ---
+   Ajustes para pantallas pequeñas (celulares).
+   En móvil se reduce el hero, el carrusel y las cards. */
+
+@media (max-width: 575.98px) {
+    .hero-proyeccion {
+        padding: 1.75rem 0;
+        border-radius: 0;
+    }
+
+    .hero-proyeccion h1 {
+        font-size: 1.65rem;
+    }
+
+    .carousel-mini .carousel-item img {
+        height: 220px;
+    }
+
+    .card-proyeccion .card-img-top {
+        height: 160px;
+    }
+}
+
+/* En tablets y escritorio se le da más espacio al hero */
+@media (min-width: 768px) {
+    .hero-proyeccion {
+        padding: 3.5rem 0;
+    }
+}

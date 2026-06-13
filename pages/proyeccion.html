@@ -1,122 +1,524 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyección</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Proyección Personal, Académica y Profesional | Angel Rodriguez</title>
 
+    <link rel="icon" href="../img/mundito.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="../css/proyeccion.css">
 </head>
 
 <body>
-    <h1>
-        Mi yo en 10 años
-    </h1>
-    <article>
-        <p>
-            En 10 años, me veo como un profesional exitoso en el campo de la tecnología, liderando proyectos innovadores
-            y
-            contribuyendo al avance de la inteligencia artificial. Espero haber desarrollado habilidades sólidas en
-            programación
-            y haber trabajado en equipos multidisciplinarios para crear soluciones que mejoren la vida de las personas.
-            Además,
-            me gustaría haber viajado por el mundo, explorando diferentes culturas y aprendiendo de ellas. En mi vida
-            personal,
-            espero haber formado una familia feliz y equilibrada, manteniendo relaciones significativas con amigos y
-            seres queridos.
-        </p>
-    </article>
 
-    <nav>
-        <a href="../index.html">
-            <i class="fa-solid fa-house"></i>
-            Inicio
-        </a>
-
-        <a href="buscar.html">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            Buscar
-        </a>
-
-        <a href="cto/contacto.html">
-            <i class="fa-solid fa-envelope"></i>
-            Contacto
-        </a>
-
-        <a href="portafolio.html" class="active-nav">
-            <i class="fa-solid fa-briefcase"></i>
-            Portafolio
-        </a>
-        <a href="proyeccion.html" class="active-nav">
-            <i class="fa-solid fa-chart-line"></i>
-            Proyección
-        </a>
-    </nav>
-    <main>
-        <h2>
-            Carrusel
-        </h2>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/mino.jpg"  class="rounded-circle "alt="mi gato" width="300" height="600">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/borderline-album.jpg"   class="rounded-circle" alt="segundo album favorito de tame impala" width="300" height="300">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/Currents.webp" class="d-block w-100" alt=" mi album favorito de tame impala" width="300" height="600">
+    <!-- Navbar responsiva (Mobile First) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-proyeccion sticky-top" aria-label="Navegación principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="proyeccion.html">
+                    <i class="fa-solid fa-chart-line me-2"></i>Mi Proyección
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="fa-solid fa-house me-1"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portafolio.html">
+                                <i class="fa-solid fa-briefcase me-1"></i>Portafolio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#perfil-futuro">Proyección</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#metas">Metas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cto/contacto.html">
+                                <i class="fa-solid fa-envelope me-1"></i>Contacto
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <!-- Hero con tipografía Bootstrap -->
+        <div class="hero-proyeccion text-center">
+            <div class="container py-3 py-md-4">
+                <p class="text-uppercase fw-semibold mb-2 small letter-spacing-1">Fundamentos Web — Bootstrap 5</p>
+                <h1 class="display-5 display-md-4 mb-3">Proyección personal, académica y profesional</h1>
+                <p class="lead lead-proyeccion mx-auto mb-0 col-lg-9">
+                    Soy <strong>Angel Steven Rodriguez Chavez</strong>, estudiante de Ingeniería en Tecnologías de la
+                    Información en la ESPE. Esta página describe hacia dónde me dirijo, qué deseo alcanzar y qué
+                    habilidades planeo fortalecer en los próximos años.
+                </p>
+            </div>
         </div>
+    </header>
 
-        <button type="button" class="btn btn-primary btn-sm">Primary</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg">Secondary</button>
-        <button type="button" class="btn btn-outline-success btn-md">Success</button>
-        <button type="button" class="btn btn-outline-danger btn-">Danger</button>
-        <button type="button" class="btn btn-outline-warning">Warning</button>
-        <button type="button" class="btn btn-outline-info">Info</button>
-        <button type="button" class="btn btn-outline-light">Light</button>
-        <button type="button" class="btn btn-outline-dark">Dark</button>
+    <div class="container my-4 my-lg-5">
+        <div class="row g-4">
 
-    </main>
+            <!-- Contenido principal -->
+            <main class="col-lg-8 order-2 order-lg-1">
 
+                <!-- Alert informativa -->
+                <div class="alert alert-espe d-flex align-items-center mb-4" role="alert">
+                    <i class="fa-solid fa-circle-info fs-4 me-3"></i>
+                    <div>
+                        Esta práctica complementa mi portafolio HTML/CSS anterior y demuestra el uso de componentes
+                        Bootstrap 5 con enfoque <strong>Mobile First</strong>.
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 Angel Rodriguez.</p>
-        <p>Universidad de las Fuerzas Armadas (ESPE) - Clase de Fundamentos Web.</p>
-        <address>
-            Ecuador | GitHub: <a href="https://github.com/angeldev7/" target="_blank"
-                style="color: white; text-decoration: underline;">angeldev7</a>
-        </address>
+                <!-- Perfil profesional futuro -->
+                <section id="perfil-futuro" class="mb-5">
+                    <h2 class="titulo-seccion h3 mb-3">Perfil profesional futuro</h2>
+                    <p class="text-muted mb-4">
+                        Aspiro a consolidarme como <span class="badge bg-success">Desarrollador Full Stack</span>
+                        con énfasis en aplicaciones web escalables, buenas prácticas de código y experiencia de
+                        usuario accesible.
+                    </p>
+
+                    <!-- Grid con cards responsivas (combinación: grid + cards + badges + botones + imágenes) -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <article class="col">
+                            <div class="card card-proyeccion">
+                                <img src="../img/espe/imagenEjemploEspe.png"
+                                    class="card-img-top img-fluid card-img-contain" alt="Formación en la ESPE">
+                                <div class="card-body">
+                                    <h3 class="card-title h5">Formación académica</h3>
+                                    <p class="card-text">
+                                        Completar la carrera con sólida base en programación, redes, bases de datos
+                                        y metodologías ágiles.
+                                    </p>
+                                    <span class="badge text-bg-warning me-1">ESPE</span>
+                                    <span class="badge text-bg-secondary">2026–2028</span>
+                                    <div class="mt-3">
+                                        <a href="#metas" class="btn btn-espe btn-sm">Ver metas</a>
+                                        <button type="button" class="btn btn-outline-espe btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalPlan">
+                                            Plan de mejora
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="col">
+                            <div class="card card-proyeccion">
+                                <img src="../img/mino.jpg"
+                                    class="card-img-top img-fluid rounded-top card-img-cover-portrait d-block"
+                                    alt="Equilibrio personal y profesional">
+                                <div class="card-body">
+                                    <h3 class="card-title h5">Equilibrio personal</h3>
+                                    <p class="card-text">
+                                        Mantener hábitos de estudio constantes, salud mental y proyectos personales
+                                        que refuercen la creatividad técnica.
+                                    </p>
+                                    <span class="badge text-bg-info me-1">Disciplina</span>
+                                    <span class="badge text-bg-primary">Crecimiento</span>
+                                    <div class="mt-3">
+                                        <button type="button" class="btn btn-outline-success btn-sm"
+                                            data-bs-toggle="collapse" data-bs-target="#detallePersonal">
+                                            Más detalles
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="collapse mt-3" id="detallePersonal">
+                        <div class="card card-body border-success">
+                            Planeo dedicar tiempo semanal a repaso de conceptos, lectura técnica y proyectos
+                            colaborativos en GitHub para construir un perfil profesional coherente.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Metas académicas y profesionales -->
+                <section id="metas" class="mb-5">
+                    <h2 class="titulo-seccion h3 mb-3">Metas académicas y profesionales</h2>
+
+                    <!-- Acordeón con carrusel embebido (combinación de componentes) -->
+                    <div class="accordion accordion-proyeccion" id="accordionMetas">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#metaCorto" aria-expanded="true" aria-controls="metaCorto">
+                                    Metas a corto plazo (6–12 meses)
+                                </button>
+                            </h3>
+                            <div id="metaCorto" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionMetas">
+                                <div class="accordion-body">
+                                    <ul class="mb-3">
+                                        <li>Dominar Bootstrap 5 y frameworks CSS modernos.</li>
+                                        <li>Aprender JavaScript intermedio y manipulación del DOM.</li>
+                                        <li>Contribuir a al menos un proyecto open source.</li>
+                                    </ul>
+
+                                    <p class="fw-semibold mb-2">Inspiración visual — áreas de interés:</p>
+                                    <div id="carouselMetas" class="carousel slide carousel-mini"
+                                        data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselMetas" data-bs-slide-to="0"
+                                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselMetas" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselMetas" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselMetas" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <figure class="carousel-item active">
+                                                <img src="../img/Currents.webp" class="d-block mx-auto"
+                                                    alt="Creatividad e innovación">
+                                                <figcaption
+                                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+                                                    Creatividad aplicada al desarrollo
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="carousel-item">
+                                                <img src="../img/borderline-album.jpg" class="d-block mx-auto"
+                                                    alt="Música para programar">
+                                                <figcaption
+                                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+                                                    Música para programar
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="carousel-item">
+                                                <img src="../img/MoureDev by Brais Moure.jpg" class="d-block mx-auto"
+                                                    alt="Inspiracion personal y maestro personal">
+                                                <figcaption
+                                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+                                                    Inspiracion personal y maestro personal
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="carousel-item">
+                                                <img src="../img/mino.jpg" class="d-block mx-auto"
+                                                    alt="Mi mascota que me da ánimos para seguir adelante" width="2304"
+                                                    height="4096">
+                                                <figcaption
+                                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+                                                    Mi mascota que me da ánimos para seguir adelante
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselMetas" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselMetas" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#metaMediano" aria-expanded="false" aria-controls="metaMediano">
+                                    Metas a mediano plazo (2–3 años)
+                                </button>
+                            </h3>
+                            <div id="metaMediano" class="accordion-collapse collapse" data-bs-parent="#accordionMetas">
+                                <div class="accordion-body">
+                                    Obtener certificaciones en desarrollo web, participar en prácticas profesionales
+                                    y construir un portafolio con proyectos reales desplegados en la nube.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#metaLargo" aria-expanded="false" aria-controls="metaLargo">
+                                    Metas a largo plazo (5–10 años)
+                                </button>
+                            </h3>
+                            <div id="metaLargo" class="accordion-collapse collapse" data-bs-parent="#accordionMetas">
+                                <div class="accordion-body">
+                                    Liderar equipos de desarrollo, especializarme en arquitectura de software o
+                                    ciberseguridad, y aportar soluciones tecnológicas con impacto social en Ecuador.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Habilidades por desarrollar + tabla + progress bars -->
+                <section id="habilidades" class="mb-5">
+                    <h2 class="titulo-seccion h3 mb-3">Habilidades por desarrollar</h2>
+                    <p class="text-muted mb-4">
+                        Plan de mejora técnica alineado con mi rol profesional deseado:
+                        <span class="badge rounded-pill text-bg-success">Full Stack Developer</span>
+                    </p>
+
+                    <!-- Tabla responsiva + progress bars (combinación) -->
+                    <div class="table-responsive mb-4">
+                        <table class="table table-striped table-hover tabla-proyeccion align-middle">
+                            <caption class="caption-top fw-semibold text-muted mb-2">
+                                Avance esperado de competencias técnicas
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Habilidad</th>
+                                    <th scope="col">Nivel actual</th>
+                                    <th scope="col">Meta 2027</th>
+                                    <th scope="col">Progreso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML / CSS / Bootstrap</td>
+                                    <td><span class="badge text-bg-primary">Intermedio</span></td>
+                                    <td>Avanzado</td>
+                                    <td style="min-width: 140px;">
+                                        <div class="progress" role="progressbar" aria-label="HTML CSS Bootstrap"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-espe" style="width: 50%">50%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td><span class="badge text-bg-warning text-dark">Básico</span></td>
+                                    <td>Intermedio</td>
+                                    <td style="min-width: 140px;">
+                                        <div class="progress" role="progressbar" aria-label="JavaScript"
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-espe" style="width: 20%">20%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bases de datos</td>
+                                    <td><span class="badge text-bg-secondary">Básico</span></td>
+                                    <td>Intermedio</td>
+                                    <td style="min-width: 140px;">
+                                        <div class="progress" role="progressbar" aria-label="Bases de datos"
+                                            aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-espe" style="width: 35%">35%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Redes / DevOps</td>
+                                    <td><span class="badge text-bg-info">En progreso</span></td>
+                                    <td>Intermedio</td>
+                                    <td style="min-width: 140px;">
+                                        <div class="progress" role="progressbar" aria-label="Redes DevOps"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-espe" style="width: 25%">25%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Proyectos futuros -->
+                <section id="proyectos" class="mb-5">
+                    <h2 class="titulo-seccion h3 mb-3">Proyectos que espero construir</h2>
+                    <div class="row g-3">
+                        <article class="col-12 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h6 card-title">
+                                        <i class="fa-solid fa-laptop-code text-success me-2"></i>Portafolio dinámico
+                                    </h3>
+                                    <p class="card-text small">
+                                        Sitio interactivo con JavaScript que integre API REST y despliegue en GitHub
+                                        Pages.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="col-12 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h6 card-title">
+                                        <i class="fa-solid fa-network-wired text-success me-2"></i>Monitor de red
+                                    </h3>
+                                    <p class="card-text small">
+                                        Herramienta para visualizar tráfico y estado de dispositivos en redes locales.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Certificaciones futuras -->
+                <section id="certificaciones" class="mb-4">
+                    <h2 class="titulo-seccion h3 mb-3">Certificaciones y aprendizajes futuros</h2>
+                    <figure class="figure figure-proyeccion text-center w-100">
+                        <img src="../img/espe/imagenEjemploEspe.png" class="figure-img img-fluid w-50 mx-auto d-block"
+                            alt="Compromiso con la formación continua">
+                        <figcaption class="figure-caption mt-2">
+                            Formación continua en la ESPE y plataformas como freeCodeCamp, Cisco Networking Academy
+                            y documentación oficial de Bootstrap.
+                        </figcaption>
+                    </figure>
+                </section>
+
+            </main>
+
+            <!-- Aside con list group conectado a secciones -->
+            <aside class="col-lg-4 order-1 order-lg-2">
+                <div class="aside-proyeccion p-4 sticky-lg-top" style="top: 5.5rem;">
+                    <h2 class="h5 titulo-seccion">Navegación rápida</h2>
+                    <p class="small text-muted">
+                        List group enlazado con las secciones informativas de esta página.
+                    </p>
+
+                    <div class="list-group list-group-flush mb-4" id="listaSecciones">
+                        <a href="#perfil-futuro" class="list-group-item list-group-item-action active-espe text-white">
+                            <i class="fa-solid fa-user-tie me-2"></i>Perfil futuro
+                        </a>
+                        <a href="#metas" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-bullseye me-2"></i>Metas
+                        </a>
+                        <a href="#habilidades" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-code me-2"></i>Habilidades
+                        </a>
+                        <a href="#proyectos" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-folder-open me-2"></i>Proyectos
+                        </a>
+                        <a href="#certificaciones" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-certificate me-2"></i>Certificaciones
+                        </a>
+                    </div>
+
+                    <h3 class="h6 fw-bold text-success">Enlaces al portafolio anterior</h3>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2">
+                            <a href="../index.html" class="text-decoration-none">
+                                <i class="fa-solid fa-arrow-left me-1"></i>Volver al inicio
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="portafolio.html" class="text-decoration-none">
+                                <i class="fa-solid fa-briefcase me-1"></i>Ver portafolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/angeldev7/P2Tarea-Web-CSS" target="_blank"
+                                rel="noopener noreferrer" class="text-decoration-none">
+                                <i class="fa-brands fa-github me-1"></i>Repo HTML/CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Modal con formulario (combinación) -->
+    <div class="modal fade" id="modalPlan" tabindex="-1" aria-labelledby="modalPlanLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modal-header-espe">
+                    <h2 class="modal-title fs-5" id="modalPlanLabel">
+                        <i class="fa-solid fa-clipboard-list me-2"></i>Plan de mejora personal
+                    </h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="small text-muted">
+                        Formulario de ejemplo para registrar compromisos de mejora académica (sin envío real).
+                    </p>
+                    <form id="formPlanMejora">
+                        <div class="mb-3">
+                            <label for="nombrePlan" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombrePlan"
+                                value="Angel Steven Rodriguez Chavez" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="metaPersonal" class="form-label">Meta principal</label>
+                            <select class="form-select" id="metaPersonal" required>
+                                <option value="">Seleccione una meta</option>
+                                <option value="fullstack">Ser desarrollador Full Stack</option>
+                                <option value="redes">Especialista en redes</option>
+                                <option value="seguridad">Analista de ciberseguridad</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="compromiso" class="form-label">Compromiso semanal (horas)</label>
+                            <input type="range" class="form-range" id="compromiso" min="5" max="30" value="10">
+                            <output id="compromisoValor" class="small text-muted">10 horas</output>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="aceptoPlan" required>
+                            <label class="form-check-label" for="aceptoPlan">
+                                Acepto dedicar tiempo constante a mi formación
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-espe w-100">Registrar compromiso</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-proyeccion py-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-1">&copy; 2026 Angel Steven Rodriguez Chavez</p>
+                    <p class="mb-0 small">Universidad de las Fuerzas Armadas ESPE — PracticaBootstrap</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <address class="mb-0 small">
+                        Ecuador<br>
+                        GitHub: <a href="https://github.com/angeldev7" target="_blank"
+                            rel="noopener noreferrer">angeldev7</a>
+                    </address>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('compromiso').addEventListener('input', function () {
+            document.getElementById('compromisoValor').textContent = this.value + ' horas';
+        });
+
+        document.getElementById('formPlanMejora').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Compromiso registrado localmente. ¡Sigue adelante con tu plan de mejora!');
+            bootstrap.Modal.getInstance(document.getElementById('modalPlan')).hide();
+        });
+    </script>
 </body>
 
 </html>

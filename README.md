@@ -1,77 +1,115 @@
-# Práctica de HTML y CSS - Unidad 2
+# Práctica Bootstrap 5 — Proyección Personal y Profesional
 
-Este proyecto es parte de las tareas prácticas para la asignatura de Fundamentos de Desarrollo Web en la carrera de Ingeniería en Tecnologías de la Información de la Universidad de las Fuerzas Armadas ESPE. 
-
-Consiste en un sitio web estructurado con HTML semántico y diseñado con estilos en CSS, incluyendo una adaptación responsiva para pantallas de computadoras y dispositivos móviles.
+Sitio web de portafolio personal y proyección profesional desarrollado en tres etapas: primero con **HTML** semántico, luego con **CSS** para la presentación visual, y finalmente con **Bootstrap 5** para la página de proyección responsiva.
 
 ---
 
-## Características del sitio
+## Descripción general
 
-*   **HTML semántico:** Se estructuró el sitio utilizando etiquetas como `header`, `nav`, `main`, `section`, `article`, `aside` y `footer` para organizar el contenido.
-*   **Estilos en CSS:** El diseño visual utiliza colores inspirados en la identidad de la universidad (verde y amarillo dorado).
-*   **Diseño responsivo:** Se usaron Media Queries para adaptar el sitio a dispositivos móviles o pantallas de menos de 700px de ancho.
-*   **Multimedia:** Se añadieron audios y videos locales, además de videos embebidos desde YouTube mediante iframes.
-*   **Formularios:** Formularios de ejemplo que envían datos utilizando el método GET.
-*   **Portafolio personal:** Se agregó la página `portafolio.html` que contiene información personal, intereses, fotos, videos y una tabla con los avances de habilidades del semestre.
+Este proyecto contiene el portafolio web de **Angel Steven Rodriguez Chavez**, estudiante de Ingeniería en Tecnologías de la Información en la ESPE. Incluye las páginas trabajadas en prácticas anteriores (inicio, búsqueda, contacto, portafolio) y una nueva página de **proyección personal, académica y profesional** construida con Bootstrap 5.
 
----
-
-## Estructura de carpetas
-
-Esta es la organización de los archivos en el proyecto:
-
-```text
-P2-Practica-Web-Css/
-│
-├── index.html                   # Página principal del sitio
-├── README.md                    # Este archivo de documentación
-│
-├── css/                         # Hojas de estilo para las páginas
-│   ├── general.css              # Estilos globales compartidos
-│   ├── index.css                # Estilos para la página de inicio
-│   ├── buscar.css               # Estilos para la página de búsqueda
-│   ├── contacto.css             # Estilos para la página de contacto
-│   └── portafolio.css           # Estilos para la página de portafolio
-│
-├── pages/                       # Páginas internas del sitio
-│   ├── buscar.html              # Simulación del buscador
-│   ├── portafolio.html          # Portafolio personal de Angel Rodriguez
-│   └── cto/
-│       └── contacto.html        # Formulario de contacto y redes sociales
-│
-├── img/                         # Imágenes y logotipos del sitio
-│   ├── mino.jpg                 # Foto del gato Mino
-│   ├── mundito.ico              # Icono del sitio web
-│   └── espe/
-│       └── imagenEjemploEspe.png # Logo de la ESPE
-│
-├── media/                       # Capturas de pantalla de la entrega
-│   ├── home_desktop.png         # Captura de pantalla de Inicio (Escritorio)
-│   ├── portafolio_desktop.png   # Captura de pantalla del Portafolio (Escritorio)
-│   ├── contacto_desktop.png     # Captura de pantalla de Contacto (Escritorio)
-│   └── index_mobile.png         # Captura de pantalla de Inicio (Móvil)
-│
-├── audio/                       # Audio local utilizado
-│   └── audioEjemploA7X.mp3      # Archivo de audio
-│
-└── video/                       # Videos locales optimizados
-    ├── AsaMitaka.mp4            # Video corto en el portafolio
-    └── videoEjemploDiagnostica.mp4 # Video institucional optimizado
-```
+La página de proyección (`pages/proyeccion.html`) presenta las metas, habilidades por desarrollar, certificaciones futuras y el rol profesional al que aspira el estudiante, utilizando componentes de Bootstrap con enfoque **Mobile First**.
 
 ---
 
 ## Tecnologías utilizadas
 
-*   **HTML5** (maquetación, tablas, formularios, reproductores multimedia)
-*   **CSS3** (diseño, Flexbox, media queries para el diseño responsivo)
-*   **FontAwesome** (iconos en la navegación y pie de página)
+- **HTML5** (etiquetas semánticas: `header`, `nav`, `main`, `section`, `article`, `aside`, `figure`, `footer`)
+- **CSS3** (estilos personalizados, Flexbox, media queries)
+- **Bootstrap 5.3** (CDN — sin instalación local)
+- **Font Awesome 6** (iconografía)
+- **JavaScript** (Bootstrap Bundle + interacciones del modal)
 
-## Información del autor
+---
 
-*   **Nombre:** Angel Steven Rodriguez Chavez
-*   **Institución:** Universidad de las Fuerzas Armadas ESPE
-*   **Semestre:** 4to Semestre
-*   **Carrera:** Ingeniería en Tecnologías de la Información
-*   **GitHub:** [angeldev7](https://github.com/angeldev7)
+## Estructura de carpetas
+
+```text
+P2-Practica-bootstrap/
+│
+├── index.html                       # Página principal del portafolio
+├── README.md                        # Este archivo
+├── informe.md                       # Informe de la práctica Bootstrap
+│
+├── css/                             # Hojas de estilo
+│   ├── general.css                  # Estilos compartidos entre páginas
+│   ├── index.css                    # Estilos para la página de inicio
+│   ├── buscar.css                   # Estilos para la página de búsqueda
+│   ├── contacto.css                 # Estilos para la página de contacto
+│   ├── portafolio.css               # Estilos para el portafolio
+│   └── proyeccion.css               # Personalización visual sobre Bootstrap
+│
+├── pages/                           # Páginas internas del sitio
+│   ├── buscar.html                  # Simulación de buscador
+│   ├── portafolio.html              # Portafolio personal
+│   ├── proyeccion.html              # Página de proyección (Bootstrap 5)
+│   └── cto/
+│       └── contacto.html            # Formulario de contacto
+│
+├── img/                             # Imágenes del sitio
+│   ├── mino.jpg                     # Foto del gato Mino
+│   ├── mundito.ico                  # Ícono del sitio
+│   ├── Currents.webp                # Imagen de álbum musical
+│   ├── borderline-album.jpg         # Imagen de álbum musical
+│   ├── MoureDev by Brais Moure.jpg  # Imagen de inspiración personal
+│   └── espe/
+│       └── imagenEjemploEspe.png    # Logo de la ESPE
+│
+├── audio/                           # Audio del sitio
+│   └── audioEjemploA7X.mp3
+│
+└── video/                           # Videos del sitio
+    ├── AsaMitaka.mp4
+    └── videoEjemploDiagnostica.mp4
+```
+
+---
+
+## Componentes Bootstrap utilizados (página de proyección)
+
+| Categoría | Componentes |
+|-----------|-------------|
+| Layout | Navbar, Container, Grid system |
+| Contenido | Cards, Accordion, Carousel, List group, Table |
+| Interacción | Buttons, Modal, Forms, Collapse |
+| Feedback | Alerts, Badges, Progress bars |
+| Media | Images (`img-fluid`) |
+| Utilidades | Spacing (`my-4`, `g-4`), Typography (`display-5`, `lead`), Responsive (`col-lg-8`) |
+
+### Combinaciones de componentes
+
+- **Acordeón + Carrusel:** metas a corto plazo con galería de imágenes.
+- **Cards + Badges + Botones + Imagen:** perfil profesional futuro.
+- **Grid + Cards responsivas:** sección de proyectos futuros.
+- **Modal + Formulario:** plan de mejora personal.
+- **Tabla + Progress bars:** habilidades por desarrollar.
+- **List group + Secciones:** navegación lateral conectada al contenido.
+
+---
+
+## Instrucciones para visualizar el sitio
+
+1. Clonar o descargar el repositorio.
+2. Abrir `index.html` en el navegador, o usar Live Server en el puerto 5500.
+3. Navegar a la página de **Proyección** desde el menú principal.
+4. Probar la vista responsiva con las herramientas de desarrollo (F12 → modo dispositivo).
+
+---
+
+## Autor
+
+- **Nombre:** Angel Steven Rodriguez Chavez
+- **Institución:** Universidad de las Fuerzas Armadas ESPE
+- **Semestre:** 4to Semestre
+- **Carrera:** Ingeniería en Tecnologías de la Información
+- **GitHub:** [angeldev7](https://github.com/angeldev7)
+
+---
+
+## Etapas del aprendizaje
+
+| Etapa | Enfoque | Páginas |
+|-------|---------|---------|
+| 1 — HTML | Estructura semántica | index, buscar, contacto, portafolio |
+| 2 — CSS | Presentación visual y responsividad | Estilos en css/ con media queries |
+| 3 — Bootstrap | Framework responsivo Mobile First | proyeccion.html con Bootstrap 5 CDN |
